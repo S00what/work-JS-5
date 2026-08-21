@@ -13,4 +13,17 @@ if (age < 18 && !isNaN(age)) {
 } else {
   alert("You alive?!");
 }
+// second task
+let time = +prompt("Enter the time");
+if (isNaN(time) || time < 0 || time > 23) {
+  alert("Isnt time");
+} else if (time < 6) {
+  alert(`${time} a.m.`);
+} else if (time <= 10) {
+  alert(`${time} am`);
+} else if (time <= 17) {
+  alert(`${time} pm`);
+} else {
+  alert(`${time} pm`);
+}
 
