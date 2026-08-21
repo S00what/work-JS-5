@@ -1,21 +1,50 @@
-// a JS hw
-var name = prompt("Print your name please");
-console.log("Your name is " + name);
-var age = Number(prompt("Print your age please"));
-console.log("Your age is " + age);
-var sum1 = Number(prompt("6 + 3 = ?"));
-var sum2 = Number(prompt("9 * 12 = ?"));
-var sum3 = Number(prompt("26 / 4 = ?"));
-var sum4 = Number(prompt("60 - 42 = ?"));
-var sum5 = Number(prompt("50 % 12 = ?"));
-console.log("6 + 3 = " + (6+3) + " Your answer " + sum1);
-console.log("9 * 12 = " + (9*12) + " Your answer " + sum2);
-console.log("24 / 4  = " + (24/4) + " Your answer " + sum3);
-console.log("60 - 42 = " + (60-42) + " Your answer " + sum4);
-console.log("50 % 12 = " + (50%12) + " Your answer " + sum5);
-// b JS hw
-var X = Number(prompt("Please print your coordinates X"))
-var Y = Number(prompt("Please print your coordinates Y"))
-var Z = Number(prompt("Please print your coordinates Z"))
+// first task
+let age = +prompt("Enter your age");
+if (age < 18 && !isNaN(age)) {
+  alert("Youre still young, you need to study");
+} else if (age <= 50 && !isNaN(age)) {
+  alert("You need to work");
+} else if (age <= 59 && !isNaN(age)) {
+  alert("Youre about to retire");
+} else if (age === 59 && !isNaN(age)) {
+  alert("Youre in retire");
+} else if (isNaN(age)) {
+  alert("Isnt age");
+} else {
+  alert("You alive?!");
+}
+// second task
+let time = +prompt("Enter the time");
+if (isNaN(time) || time < 0 || time > 23) {
+  alert("Isnt time");
+} else if (time < 6) {
+  alert(`${time} a.m.`);
+} else if (time <= 10) {
+  alert(`${time} am`);
+} else if (time <= 17) {
+  alert(`${time} pm`);
+} else {
+  alert(`${time} pm`);
+}
+//third task
+let num1 = +prompt("Enter first number");
+let num2 = +prompt("Enter second number");
+let num3 = +prompt("Enter third number");
 
-alert("The arithmetic mean of your coordinates " + (X+Y+Z) / 3)
+if (num1 > num2 && num1 < num3) {
+  alert(`Среднее число между ${num2} и ${num3}. Это ${num1}`);
+} else if (num1 > num3 && num1 < num2) {
+  alert(`Среднее число между ${num2} и ${num3}. Это ${num1}`);
+} else if (num2 > num3 && num2 < num1) {
+  alert(`Среднее число между ${num1} и ${num3}. Это ${num2}`);
+} else if (num2 > num1 && num2 < num3) {
+  alert(`Среднее число между ${num1} и ${num3}. Это ${num2}`);
+} else if (num3 > num2 && num3 < num1) {
+  alert(`Среднее число между ${num2} и ${num1}. Это ${num3}`);
+} else if (num3 > num1 && num3 < num2) {
+  alert(`Среднее число между ${num2} и ${num1}. Это ${num3}`);
+} else if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+  alert("Все три числа должны быть числом");
+} else {
+  alert("Something went wrong");
+}
