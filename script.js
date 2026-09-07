@@ -9,11 +9,10 @@ do {
       `Name is ${users[`user${i}`].name}, age is ${users[`user${i}`].age}, number user ${i}`,
     );
   }
-  u++;
 } while (
   !users[`user${i}`].age ||
   typeof users[`user${i}`].name !== "string" ||
-  u != 10
+  i++ != 9
 );
 console.log(users);
 
